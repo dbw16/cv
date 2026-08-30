@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "touying-author": {
+      "source": "apcamargo/typst-skills",
+      "sourceType": "github",
+      "skillPath": "touying-author/SKILL.md",
+      "computedHash": "ef85b9da220641f3e5cf068903356640e7ae33024b95191b71600850abab1479"
+    },
+    "typst-author": {
+      "source": "apcamargo/typst-skills",
+      "sourceType": "github",
+      "skillPath": "typst-author/SKILL.md",
+      "computedHash": "776507e23ef3e5afab3860a4e5083b7d59b0fdcae43d0a0403cc536ff2193412"
+    }
+  }
+}
