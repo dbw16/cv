@@ -1,0 +1,6 @@
+# Build output — regenerate with `just pdf` / `just site`
+/site/
+/cv.pdf
+/cv.html
+/cv-*.svg
+WESTPAC_BRAIN_DUMP.md
