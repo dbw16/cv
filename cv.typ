@@ -24,33 +24,65 @@
 ]
 
 #section("Profile")
-An experienced software engineer with a background in Cloud, DevOps, and SRE with a proven track
-record of delivering high-quality solutions to complex technical challenges. A graduate of Theoretical
-Physics from Trinity College Dublin who possesses strong programming and mathematical skills as
-well as a natural aptitude for problem-solving. An outgoing person with excellent communication and
-interpersonal skills who thrives in fast-paced, dynamic environments.
+A platform engineer who solves everything in code: seven years across SRE, DevOps, and platform
+teams at Westpac, IBM, and Coinbase, most recently designated a lead in Westpac's Software Factory
+SRE team. Takes messy, org-wide problems such as CI/CD estates, secrets management, and datacentre
+migrations, and returns them as automated systems that run themselves. A Theoretical Physics
+graduate of Trinity College Dublin, equally comfortable deep in Kubernetes and Terraform or
+explaining the result to management.
 
 #section("Employment Experience")
 
 #entry("Westpac - Platform Engineer - Auckland Nz", "October 2023 - Present")[
-  - Migrated the organisation's Jenkins pipeline platform from VM to Kubernetes.
-  - Rolled out the SNYK platform for code scanning and acted as a development advocate for how
-    to best integrate the tooling into the org's wider workflows.
-  - Migrated Jenkins worker agents from RHEL 7 to RHEL 8, including a rewrite of Chef cookbooks and
-    incorporating immutable infrastructure practices via Packer to minimise changes post production.
-  *Skills*: Python, Groovy, Jenkins, Terraform, Chef, Redhat, Terragrunt, VMware, Docker
+  // TODO: add the date of the Software Factory SRE lead designation
+  Designated a lead within the 12-engineer Software Factory SRE team, mentoring engineers from
+  ops backgrounds into modern dev practices.
+  - Re-platformed the CloudBees CI/CD control plane from around 30 large VMs onto on-prem
+    Kubernetes with Helm, including a cross-datacentre volume replication system for backups,
+    cutting deploy times to 2 minutes and saving significant infrastructure cost; wrote a CLI
+    tool for CloudBees Configuration as Code with a plugin dependency resolver.
+  - Built the org-wide GitOps workflow for Jenkins pipelines: teams raise PRs of JobDSL
+    definitions against a central repo, CI validates them, and webhooks sync them onto
+    controllers. Used by 50+ teams; 1000+ PRs merged and tens of thousands of pipelines deployed.
+  - Updated the bank-wide Chef cookbooks to support RHEL 8, migrated the team's own estate from
+    RHEL 7, then was seconded out to help other teams across the line before end of support.
+  - Rewrote the org-wide Terraform VM module from external-exec provisioning to cloud-init,
+    the groundwork that enabled the bank's rollout of Terraform Enterprise.
+  - Consolidated the bank's scattered SonarQube instances into a single Kubernetes-hosted
+    instance backed by self-run clustered Postgres, migrating all teams onto it with tooling and
+    docs for Java, npm, and Python builds; rolled out Snyk on the same platform patterns.
+  - Single-handedly migrated CloudBees, Snyk, and SonarQube onto the bank's new OpenShift
+    platform in 4 months against a compressing deadline; seconded to the Cards SRE team to move
+    three payment-related infrastructure stacks to the new datacentres.
+  - Rewrote the bank's Vault estate (7 clusters) end to end: new IaC and deploy pipelines,
+    Consul to Raft storage migration, snapshots to on-prem S3, and a rollout process taking
+    deploys from an outage each to weekly and zero-downtime; identified and fixed
+    privilege-escalation issues in namespace policies.
+  - Re-architected Snyk to run active-active across two datacentres behind F5 GSLB
+    health-checked load balancing, meeting a bank DR mandate.
+  - Built a standardised uv-based Python build system and Jenkins shared library for building
+    and deploying Python apps to containers; 10 teams migrated so far.
+  - Worked with the ServiceNow team to deliver an API and pipeline shared library that raises
+    change records automatically, replacing manual change-raising in the UI; adopted org-wide.
+  - Drove GitHub Copilot adoption across a 500-engineer org: led the evaluation, set up SSO
+    integrations, and helped teams onboard; built MCP servers for CloudBees and SonarQube and
+    agent skills standardising how pipelines are written.
+  - Built the Python (FastAPI) backend and OpenShift deployment for an internal career-ladder
+    app tracking skills across the company, with CI on ruff, mypy, and uv.
+  *Skills*: Kubernetes, OpenShift, Helm, Vault, Terraform, Ansible, Chef, Python, uv, FastAPI,
+  Jenkins, CloudBees, GitOps, Postgres, F5 GSLB, MCP, CI/CD
 ]
 
 #v(0.5em)
 #entry("Contractor - Westpac - Platform Engineer - Auckland Nz", "April 2023 - October 2023")[
-  - Developed Python and Jenkins automation workflows that reduced team onboarding time
-    from days to minutes.
-  - Refactored legacy Terraform codebase using Terragrunt, achieving 40% code reduction
-    through DRY principles.
-  - Enhanced Chef deployment reliability by implementing comprehensive retry mechanisms,
-    decreasing deployment failures by 60%.
-  - Streamlined platform operations through custom automation tools and self-service capabilities.
-  *Skills*: Python, Groovy, Jenkins, Terraform, Chef, Linux, Terragrunt, VMware, Docker
+  - Joined a 10-engineer team standing up an enterprise CloudBees (Jenkins) instance to replace
+    20+ team-run Jenkins servers across the bank.
+  - Made the case for refactoring provisioning into a central Terragrunt configuration:
+    onboarding a team went from a full, error-prone sprint of engineering work to adding a
+    couple of lines to a JSON config file.
+  - Moved VM deployment to an immutable-image pattern with Packer, cutting deploy time per VM
+    from 30 minutes to 5.
+  *Skills*: Terraform, Terragrunt, Packer, Chef, Jenkins, CloudBees, vSphere, Linux, Python, Bash
 ]
 
 #v(0.5em)
